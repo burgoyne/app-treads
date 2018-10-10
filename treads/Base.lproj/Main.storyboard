@@ -33,12 +33,15 @@
                                 <rect key="frame" x="152" y="506" width="71" height="71"/>
                                 <state key="normal" image="startRunningButton"/>
                                 <connections>
-                                    <segue destination="Z1n-CB-wuT" kind="show" id="Z2A-tQ-9J1"/>
+                                    <segue destination="Z1n-CB-wuT" kind="show" id="5ly-sB-fra"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClO-Da-eKV">
                                 <rect key="frame" x="311" y="396" width="58" height="58"/>
                                 <state key="normal" image="centerNavButton"/>
+                                <connections>
+                                    <action selector="locationCenterBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ofD-Q1-Cuy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Running" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="998-OE-aYM">
                                 <rect key="frame" x="141" y="589" width="93" height="21"/>
@@ -69,6 +72,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="mapView" destination="yxI-XE-Q8e" id="yam-xV-jhf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
-        <!--View Controller-->
+        <!--Current RunVC-->
         <scene sceneID="Ddk-ai-iKS">
             <objects>
-                <viewController id="Z1n-CB-wuT" sceneMemberID="viewController">
+                <viewController id="Z1n-CB-wuT" customClass="CurrentRunVC" customModule="treads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L7D-Cv-CQB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,15 +279,15 @@
                                 <rect key="frame" x="254" y="552" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunButton" translatesAutoresizingMaskIntoConstraints="NO" id="e6K-2U-18W">
-                                <rect key="frame" x="56" y="561" width="57" height="57"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyF-Th-eia">
                                 <rect key="frame" x="149" y="577" width="67.5" height="25"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunButton" translatesAutoresizingMaskIntoConstraints="NO" id="e6K-2U-18W">
+                                <rect key="frame" x="56" y="561" width="57" height="57"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -313,6 +319,10 @@
                         <viewLayoutGuide key="safeArea" id="DXD-eF-eBL"/>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="slideBGImage" destination="OEj-n7-EnK" id="Bq7-3x-TT4"/>
+                        <outlet property="sliderImage" destination="e6K-2U-18W" id="4pT-La-l8H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcv-jq-4WX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
