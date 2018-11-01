@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -277,6 +277,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-hw-qL8">
                                 <rect key="frame" x="254" y="552" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="BaV-Yl-RyA"/>
+                                    <constraint firstAttribute="width" constant="75" id="ZR3-c8-MAK"/>
+                                    <constraint firstAttribute="width" secondItem="Mni-hw-qL8" secondAttribute="height" multiplier="1:1" id="p2l-lg-Yqq"/>
+                                </constraints>
                                 <state key="normal" image="pauseButton"/>
                                 <connections>
                                     <action selector="pauseBtnPressed:" destination="Z1n-CB-wuT" eventType="touchUpInside" id="XNF-Wu-uMf"/>
@@ -294,7 +299,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Mni-hw-qL8" firstAttribute="leading" secondItem="OEj-n7-EnK" secondAttribute="trailing" constant="-24.5" id="4WW-8b-kET"/>
                             <constraint firstItem="Yjs-3P-bKM" firstAttribute="centerX" secondItem="L7D-Cv-CQB" secondAttribute="centerX" id="512-lO-u7Q"/>
                             <constraint firstItem="OEj-n7-EnK" firstAttribute="centerX" secondItem="L7D-Cv-CQB" secondAttribute="centerX" constant="-25" id="7wP-qO-gJ3"/>
                             <constraint firstItem="Ww3-lG-ynt" firstAttribute="top" secondItem="cDF-21-Wlz" secondAttribute="bottom" constant="30" id="9Rc-w4-01c"/>
@@ -313,6 +317,7 @@
                             <constraint firstItem="yKK-J4-wKL" firstAttribute="top" secondItem="DXD-eF-eBL" secondAttribute="top" constant="8" id="iHF-4n-idW"/>
                             <constraint firstItem="cDF-21-Wlz" firstAttribute="leading" secondItem="DXD-eF-eBL" secondAttribute="leading" id="lt4-R7-oF0"/>
                             <constraint firstItem="tZN-na-239" firstAttribute="centerY" secondItem="cDF-21-Wlz" secondAttribute="centerY" id="oBh-1G-H2x"/>
+                            <constraint firstItem="Mni-hw-qL8" firstAttribute="leading" secondItem="fyF-Th-eia" secondAttribute="trailing" constant="37.5" id="ohT-mi-aJM"/>
                             <constraint firstItem="Ww3-lG-ynt" firstAttribute="centerX" secondItem="L7D-Cv-CQB" secondAttribute="centerX" id="quT-Rl-Foq"/>
                             <constraint firstItem="DXD-eF-eBL" firstAttribute="trailing" secondItem="ygt-Cx-Sei" secondAttribute="trailing" id="tJr-Xc-wmo"/>
                             <constraint firstItem="e6K-2U-18W" firstAttribute="centerY" secondItem="OEj-n7-EnK" secondAttribute="centerY" id="tpe-DM-EPD"/>

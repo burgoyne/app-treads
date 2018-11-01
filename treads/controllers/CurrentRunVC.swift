@@ -44,14 +44,28 @@ class CurrentRunVC: LocationVC {
     func startRun() {
         manager?.startUpdatingLocation()
         startTimer()
+        pauseBtn.setImage(UIImage(named: "pauseButton"), for: .normal)
     }
     
     @IBAction func pauseBtnPressed(_ sender: Any) {
-        
+        if timer.isValid {
+            pauseRun()
+        } else {
+            startRun()
+        }
     }
     
     func endRun() {
         manager?.stopUpdatingLocation()
+        //add our object ro Realm
+    }
+    
+    func pauseRun() {
+        startLocation = nil
+        lastLocation = nil
+        timer.invalidate()
+        manager?.stopUpdatingLocation()
+        pauseBtn.setImage(UIImage(named: "resumeButton"), for: .normal)
     }
     
     func startTimer() {
@@ -79,7 +93,10 @@ class CurrentRunVC: LocationVC {
                     sliderView.center.x = sliderView.center.x + translation.x
                 } else if sliderView.center.x >= (slideBGImage.center.x + maxAdjust) {
                     sliderView.center.x = slideBGImage.center.x + maxAdjust
+                    
                     //End run code
+                    endRun()
+                    
                     dismiss(animated: true, completion: nil)
                 } else {
                     sliderView.center.x = slideBGImage.center.x - minAdjust
