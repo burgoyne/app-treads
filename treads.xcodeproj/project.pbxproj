@@ -19,6 +19,8 @@
 		8BB28FC0218E7A5100C6F91A /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB28FBF218E7A5100C6F91A /* Run.swift */; };
 		8BB28FC2218E848000C6F91A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB28FC1218E848000C6F91A /* Constants.swift */; };
 		8BB28FC4218E883900C6F91A /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB28FC3218E883900C6F91A /* RunLogCell.swift */; };
+		8BB28FC6218E9AF500C6F91A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB28FC5218E9AF500C6F91A /* Location.swift */; };
+		8BB28FC8218E9E7D00C6F91A /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB28FC7218E9E7D00C6F91A /* RealmConfig.swift */; };
 		D3E673E9E1C18FFF27368DFF /* Pods_treads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D98B64EF7B03C0270A122C3 /* Pods_treads.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		8BB28FBF218E7A5100C6F91A /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		8BB28FC1218E848000C6F91A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8BB28FC3218E883900C6F91A /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
+		8BB28FC5218E9AF500C6F91A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8BB28FC7218E9E7D00C6F91A /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		FB7AD45AEC927B5BFC5B7275 /* Pods-treads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-treads.debug.xcconfig"; path = "Pods/Target Support Files/Pods-treads/Pods-treads.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB28FC1218E848000C6F91A /* Constants.swift */,
+				8BB28FC7218E9E7D00C6F91A /* RealmConfig.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB28FBF218E7A5100C6F91A /* Run.swift */,
+				8BB28FC5218E9AF500C6F91A /* Location.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -273,11 +279,13 @@
 			files = (
 				8B7051DF216E604500EF4AD6 /* CurrentRunVC.swift in Sources */,
 				8B611DCA217545AA0067B4E5 /* Extensions.swift in Sources */,
+				8BB28FC6218E9AF500C6F91A /* Location.swift in Sources */,
 				8B803BC921669E40008DE8DA /* RunLogVC.swift in Sources */,
 				8B7051DD216E5C5300EF4AD6 /* LocationVC.swift in Sources */,
 				8B803BC521669E40008DE8DA /* AppDelegate.swift in Sources */,
 				8BB28FC0218E7A5100C6F91A /* Run.swift in Sources */,
 				8BB28FC4218E883900C6F91A /* RunLogCell.swift in Sources */,
+				8BB28FC8218E9E7D00C6F91A /* RealmConfig.swift in Sources */,
 				8B803BC721669E40008DE8DA /* BeginRunVC.swift in Sources */,
 				8BB28FC2218E848000C6F91A /* Constants.swift in Sources */,
 			);
